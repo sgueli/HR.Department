@@ -1,0 +1,87 @@
+﻿@model HR.Department.Models.Entities.Employee
+
+@{
+    ViewBag.Title = "Employee Details";
+}
+
+<h2> Employee Details</h2>
+
+
+<hr />
+
+        
+
+@using (Html.BeginForm()) {
+   
+
+    
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="details">
+            @Html.LabelFor(model => model.First )
+            @Html.TextBoxFor(model => model.First ) 
+           
+            <hr />
+            
+            @Html.LabelFor(model => model.Last  )
+            @Html.TextBoxFor(model => model.Last  ) 
+            
+             <hr />
+    
+             @Html.LabelFor(model => model.Address  )
+             @Html.TextBoxFor(model => model.Address  ) 
+            
+             <hr />
+            
+            
+             @Html.LabelFor(model => model.City  )
+             @Html.TextBoxFor(model => model.City  ) 
+            
+             <hr />
+            
+            
+              @Html.LabelFor(model => model.State  )
+              @Html.TextBoxFor(model => model.State  ) 
+            
+             <hr />
+
+              @Html.LabelFor(model => model.Zip  )
+              @Html.TextBoxFor(model => model.Zip  ) 
+            
+             <hr />
+            
+              @Html.LabelFor(model => model.Phone  )
+              @Html.TextBoxFor(model => model.Phone  ) 
+            
+             <hr />       
+            
+            @Html.LabelFor(model => model.Department )
+            @Html.TextBoxFor(model => model.Department  )
+            
+        
+             <hr />
+       
+             @Html.LabelFor(model => model.Manager )
+             @Html.TextBoxFor(model => model.Manager  )
+            
+        
+              <hr />
+       
+            @Html.LabelFor(model => model.Title )
+            @Html.TextBoxFor(model => model.Title  )
+            
+             <hr />
+    
+            @Html.LabelFor(model => model.Location )
+            @Html.TextBoxFor(model => model.Location  )
+            
+            <hr />
+      
+    </div>    
+    
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
